@@ -14,6 +14,9 @@ class Transfer
     account_two = BankAccount.new(@receiver)
 
     if account_one.valid? == true && account_two.valid? == true
+      true
+    else
+      false
   end
 
 end
