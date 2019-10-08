@@ -13,7 +13,7 @@ class Transfer
     account_one = BankAccount.new(@sender)
     account_two = BankAccount.new(@receiver)
 
-    
+    if account_one.valid? == true 
   end
 
 end
