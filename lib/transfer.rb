@@ -10,8 +10,8 @@ class Transfer
   end
 
   def valid?
-    account_one = BankAccount.new(sender)
-    account_two = BankAccount.new(receiver)
+    account_one = BankAccount.new(@sender)
+    account_two = BankAccount.new(@receiver)
   end
 
 end
