@@ -9,7 +9,7 @@ class Transfer
     @amount = amount
   end
 
-  def valid?
+  def valid?(sender)
     account_one = BankAccount.name(sender)
     account_two = BankAccount.name(receiver)
 
