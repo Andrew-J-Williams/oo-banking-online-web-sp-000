@@ -11,7 +11,7 @@ class Transfer
 
   def valid?
     account_one = BankAccount.name(sender)
-    account_two = BankAccount.name
+    account_two = BankAccount.name(receiver)
 
   end
 
