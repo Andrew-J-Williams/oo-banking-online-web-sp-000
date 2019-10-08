@@ -13,6 +13,8 @@ class Transfer
     account_one = BankAccount.name(sender)
     account_two = BankAccount.name(receiver)
 
+    if sender.valid? == true && receiver.valid?
+
   end
 
 end
