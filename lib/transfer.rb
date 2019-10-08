@@ -22,6 +22,10 @@ class Transfer
       else
         self.status = 'rejected'
         "Transaction rejected. Please check your account balance"
+      end
+    else
+
+    end
   end
 
   def reverse_transfer
