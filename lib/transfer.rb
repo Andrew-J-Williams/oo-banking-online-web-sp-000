@@ -10,7 +10,7 @@ class Transfer
   end
 
   def valid?
-    BankAccount
+    account_one = 
   end
 
 end
