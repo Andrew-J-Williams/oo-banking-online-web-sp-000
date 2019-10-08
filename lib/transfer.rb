@@ -10,7 +10,7 @@ class Transfer
   end
 
   def valid?
-    account_one = BankAccount
+    account_one = BankAccount.new(sender)
   end
 
 end
