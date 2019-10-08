@@ -30,10 +30,10 @@ class Transfer
   end
 
   def reverse_transfer
-    if @status == 'complete'
-      @sender.balance += amount
+    if @status == 'complete' # First, we check to see if the transfer status is 'complete'. If not, we know that no transfer took place.
+      @sender.balance += amount # After confirming a transfer, we simply reverse the math, returning the sender's funds to their balance.
       @receiver.balance -= amount
-      @status = 'reversed'
+      @status = 'reversed' # We update the status with 'reverse'
     end
   end
 
