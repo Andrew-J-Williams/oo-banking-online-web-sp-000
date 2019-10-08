@@ -10,7 +10,7 @@ class BankAccount
   end
 
   def deposit(money) # Takes the argument of 'money', converts it to an integer, and adds it to our 'balance'.
-    @balance += money.to_i
+    self.balance += money.to_i
   end
 
   def display_balance # Simply outputs a string with our balance attribute inserted inside.
