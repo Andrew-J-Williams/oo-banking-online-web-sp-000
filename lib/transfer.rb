@@ -15,9 +15,9 @@ class Transfer
 
   def execute_transaction # We first use the method to check and see if our transfer is valid and has a status of 'pending'
     if valid? && @status == 'pending'
-      if @sender.balance > amount
-        @sender.balance -= amount
-        @receiver.balance += amount
+      if @sender.balance > amount # We then check to see if the amount the 'sender' is transferring is less than the amount in their balance.
+        @sender.balance -= amount # If so, we execute a transfer, removing funds from the sender and giving them to the receiver.
+        @receiver.balance += amount # We finish it off by changing our status to 'complete', as to avoid processing the transfer again.
         @status = 'complete'
       else
         @status = 'rejected'
