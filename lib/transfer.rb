@@ -14,6 +14,9 @@ class Transfer
     account_two = BankAccount.name(receiver)
 
     if sender.valid? == true && receiver.valid?
+      true
+    else
+      false
 
   end
 
