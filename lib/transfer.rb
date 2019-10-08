@@ -13,7 +13,7 @@ class Transfer
     @sender.valid? && @receiver.valid? ? true : false # We compare to see if both are true.
   end
 
-  def execute_transaction
+  def execute_transaction # We first use the method to check and see if our transfer is valid and has a status of 'pending'
     if valid? && @status == 'pending'
       if @sender.balance > amount
         @sender.balance -= amount
