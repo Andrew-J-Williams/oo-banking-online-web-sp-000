@@ -19,11 +19,11 @@ class Transfer
         @sender.balance -= amount # If so, we execute a transfer, removing funds from the sender and giving them to the receiver.
         @receiver.balance += amount # We finish it off by changing our status to 'complete', as to avoid processing the transfer again.
         @status = 'complete'
-      else
+      else # If the sender is transferring more than their account allows, we reject the transfer.
         @status = 'rejected'
         "Transaction rejected. Please check your account balance."
       end
-    else
+    else # If the transfer does not meet one or both of the requirements above in the '&&', we reject the transfer immediately.
       @status = 'rejected'
       "Transaction rejected. Please check your account balance."
     end
