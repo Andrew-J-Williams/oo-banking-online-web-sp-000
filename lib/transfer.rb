@@ -16,6 +16,7 @@ class Transfer
   def execute_transaction
     if self.valid?
       @sender -= @amount
+      @receiver.deposit(@amount)
   end
 
   def reverse_transfer
