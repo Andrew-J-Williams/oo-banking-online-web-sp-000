@@ -10,14 +10,7 @@ class Transfer
   end
 
   def valid?
-    account_one = BankAccount.name(@sender)
-    account_two = BankAccount.name(@receiver)
-
-    if sender.valid? == true && receiver.valid?
-      true
-    else
-      false
-    end
+    
 
   end
 
